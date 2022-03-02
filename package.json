@@ -28,7 +28,7 @@
     "test": "nyc mocha --async-only --exit"
   },
   "dependencies": {
-    "glob-watcher": "^5.0.5",
+    "glob-watcher": "BonnierNews/glob-watcher#semver:^5.1.0",
     "gulp-cli": "^2.3.0",
     "undertaker": "^1.3.0",
     "vinyl-fs": "^3.0.3"
