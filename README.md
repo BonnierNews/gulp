@@ -4,7 +4,7 @@
 
 This is a fork of Gulp.js [gulp](https://github.com/gulpjs/gulp) repo, which is the repo for [gulp](https://www.npmjs.com/package/gulp) on npm.
 
-That repo seems to have been abandoned, so this fork was created simply to keep packages up to date with security fixes.
+That repo hasn't been updated for a number of years, so this fork was created simply to keep packages up to date with security fixes.
 
 <p align="center">
   <a href="https://gulpjs.com">
