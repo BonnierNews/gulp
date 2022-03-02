@@ -25,7 +25,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn lint",
-    "test": "nyc mocha --async-only"
+    "test": "nyc mocha --async-only --exit"
   },
   "dependencies": {
     "glob-watcher": "^5.0.5",
@@ -38,7 +38,7 @@
     "eslint-config-gulp": "^5.0.1",
     "expect": "^27.5.1",
     "mkdirp": "^0.5.5",
-    "mocha": "^3.0.0",
+    "mocha": "^9.2.1",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2"
   },
