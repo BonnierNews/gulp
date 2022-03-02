@@ -16,8 +16,8 @@ describe('gulp.dest()', function() {
 
   it('should return a stream', function(done) {
     var stream = gulp.dest(path.join(__dirname, './fixtures/'));
-    expect(stream).toExist();
-    expect(stream.on).toExist();
+    expect(stream).toBeTruthy();
+    expect(stream.on).toBeTruthy();
     done();
   });
 
@@ -29,17 +29,17 @@ describe('gulp.dest()', function() {
     outstream.on('error', done);
     outstream.on('data', function(file) {
       // Data should be re-emitted right
-      expect(file).toExist();
-      expect(file.path).toExist();
-      expect(file.contents).toExist();
+      expect(file).toBeTruthy();
+      expect(file.path).toBeTruthy();
+      expect(file.contents).toBeTruthy();
       expect(file.path).toEqual(path.join(outpath, './copy/example.txt'));
-      expect(file.contents).toEqual('this is a test');
+      expect(file.contents.toString()).toEqual('this is a test');
     });
     outstream.on('end', function() {
       fs.readFile(path.join(outpath, 'copy', 'example.txt'), function(err, contents) {
-        expect(err).toNotExist();
-        expect(contents).toExist();
-        expect(contents).toEqual('this is a test');
+        expect(err).toBeFalsy();
+        expect(contents).toBeTruthy();
+        expect(contents.toString()).toEqual('this is a test');
         done();
       });
     });
@@ -53,15 +53,15 @@ describe('gulp.dest()', function() {
     outstream.on('error', done);
     outstream.on('data', function(file) {
       // Data should be re-emitted right
-      expect(file).toExist();
-      expect(file.path).toExist();
-      expect(file.contents).toNotExist();
+      expect(file).toBeTruthy();
+      expect(file.path).toBeTruthy();
+      expect(file.contents).toBeFalsy();
       expect(file.path).toEqual(path.join(outpath, './copy/example.txt'));
     });
     outstream.on('end', function() {
       fs.readFile(path.join(outpath, 'copy', 'example.txt'), function(err, contents) {
-        expect(err).toExist();
-        expect(contents).toNotExist();
+        expect(err).toBeTruthy();
+        expect(contents).toBeFalsy();
         done();
       });
     });
@@ -74,16 +74,16 @@ describe('gulp.dest()', function() {
     outstream.on('error', done);
     outstream.on('data', function(file) {
       // Data should be re-emitted right
-      expect(file).toExist();
-      expect(file.path).toExist();
-      expect(file.contents).toExist();
+      expect(file).toBeTruthy();
+      expect(file.path).toBeTruthy();
+      expect(file.contents).toBeTruthy();
       expect(file.path).toEqual(path.join(outpath, './copy/example.txt'));
     });
     outstream.on('end', function() {
       fs.readFile(path.join(outpath, 'copy', 'example.txt'), function(err, contents) {
-        expect(err).toNotExist();
-        expect(contents).toExist();
-        expect(contents).toEqual('this is a test');
+        expect(err).toBeFalsy();
+        expect(contents).toBeTruthy();
+        expect(contents.toString()).toEqual('this is a test');
         done();
       });
     });
@@ -112,13 +112,13 @@ describe('gulp.dest()', function() {
     outstream.on('error', done);
     outstream.on('data', function(file) {
       // Data should be re-emitted right
-      expect(file).toExist();
-      expect(file.path).toExist();
+      expect(file).toBeTruthy();
+      expect(file.path).toBeTruthy();
       expect(file.path).toEqual(path.join(outpath, './stuff'));
     });
     outstream.on('end', function() {
       fs.exists(path.join(outpath, 'stuff'), function(exists) {
-        expect(exists).toExist();
+        expect(exists).toBeTruthy();
         done();
       });
     });

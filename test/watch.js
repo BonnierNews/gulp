@@ -118,7 +118,7 @@ describe('gulp.watch()', function() {
 
     var watcher = gulp.watch(relFile, { cwd: cwd })
       .on('change', function(filepath) {
-        expect(filepath).toExist();
+        expect(filepath).toBeTruthy();
         expect(path.resolve(cwd, filepath)).toEqual(path.resolve(tempFile));
         watcher.close();
         done();
