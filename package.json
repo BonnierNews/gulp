@@ -1,6 +1,6 @@
 {
   "name": "gulp",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "description": "The streaming build system.",
   "homepage": "https://gulpjs.com",
   "author": "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)",
@@ -8,10 +8,10 @@
     "Eric Schoffstall <yo@contra.io>",
     "Blaine Bublitz <blaine.bublitz@gmail.com>"
   ],
-  "repository": "gulpjs/gulp",
+  "repository": "BonnierNews/gulp",
   "license": "MIT",
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 6.0"
   },
   "main": "index.js",
   "files": [
@@ -24,10 +24,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "nyc mocha --async-only",
-    "azure-pipelines": "nyc mocha --async-only --reporter xunit -O output=test.xunit",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "pretest": "yarn lint",
+    "test": "nyc mocha --async-only"
   },
   "dependencies": {
     "glob-watcher": "^5.0.3",
@@ -36,7 +34,6 @@
     "vinyl-fs": "^3.0.0"
   },
   "devDependencies": {
-    "coveralls": "github:phated/node-coveralls#2.x",
     "eslint": "^2.13.1",
     "eslint-config-gulp": "^3.0.1",
     "expect": "^1.20.2",
