@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var expect = require('expect');
+var {expect} = require('expect');
 var rimraf = require('rimraf');
 
 var gulp = require('../');

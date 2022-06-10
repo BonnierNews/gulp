@@ -5,7 +5,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var expect = require('expect');
+var {expect} = require('expect'); 
 var rimraf = require('rimraf');
 var mkdirp = require('mkdirp');
 
@@ -27,7 +27,7 @@ function updateTempFile(path) {
 
 describe('gulp.watch()', function() {
   beforeEach(rimraf.bind(null, outpath));
-  beforeEach(mkdirp.bind(null, outpath));
+  beforeEach(async ()=> {await mkdirp(outpath)});
   afterEach(rimraf.bind(null, outpath));
 
   it('should call the function when file changes: no options', function(done) {

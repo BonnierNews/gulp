@@ -1,6 +1,6 @@
 'use strict';
 
-var expect = require('expect');
+var {expect} = require('expect');
 
 var gulp = require('../');
 
