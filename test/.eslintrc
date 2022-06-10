@@ -1,6 +1,9 @@
 {
   "extends": "gulp",
-  "rules": { "no-prototype-builtins": "off" },
+  "rules": {
+    "no-prototype-builtins": "off",
+    "node/no-unsupported-features/es-syntax": 0
+  },
   "env": {
     "node": true,
     "mocha": true
