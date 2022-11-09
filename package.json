@@ -1,6 +1,6 @@
 {
   "name": "gulp",
-  "version": "4.2.2",
+  "version": "4.3.0",
   "description": "The streaming build system.",
   "homepage": "https://gulpjs.com",
   "author": "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)",
@@ -11,7 +11,7 @@
   "repository": "BonnierNews/gulp",
   "license": "MIT",
   "engines": {
-    "node": ">= 16.5"
+    "node": ">= 18.0.0"
   },
   "main": "index.js",
   "files": [
@@ -34,7 +34,7 @@
     "vinyl-fs": "BonnierNews/vinyl-fs#semver:^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.24.0",
+    "eslint": "^8.27.0",
     "eslint-config-gulp": "^5.0.1",
     "expect": "^29.0.3",
     "mkdirp": "^1.0.4",
