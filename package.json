@@ -40,7 +40,7 @@
     "mkdirp": "^1.0.4",
     "mocha": "^10.1.0",
     "nyc": "^15.1.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^4.1.2"
   },
   "keywords": [
     "build",
