@@ -1,5 +1,7 @@
 ## BN fork
 
+As of 2023-12-15 this project is no longer used, and the repo has been archived.
+
 ![Build Status](https://github.com/BonnierNews/gulp/actions/workflows/node.js.yml/badge.svg)
 
 This is a fork of Gulp.js [gulp](https://github.com/gulpjs/gulp) repo, which is the repo for [gulp](https://www.npmjs.com/package/gulp) on npm.
